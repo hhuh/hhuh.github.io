@@ -1,0 +1,122 @@
+@import url(fontawesome-all.min.css);
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+
+:root {
+	--c1: rgba(0, 0, 0, 0);
+	--c2: rgba(255, 69, 0, .3);
+	--fontColor: #ECE0D4;
+	font-size: 20px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(to right, var(--c1), var(--c2));
+	background-color: MidnightBlue;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-family: Muli, sans-serif;
+	color: var(--fontColor);
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.5rem;
+	width: 60%;
+	padding: 0 1rem;
+}
+
+.header-icons {
+	font-size: 2rem;
+}
+
+section {
+	/*background-color: red;*/
+	width: 60%;
+}
+
+section h1 {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	/*background-color: purple;*/
+}
+
+#intro {
+
+}
+
+/*.side-list {
+	display: flex;
+	justify-content: center;
+}*/
+
+.side-list ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 92%;
+}
+
+.side-list ul li {
+	display: inline;
+}
+
+.container-box {
+	margin: 0 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	/*background-color: yellow;*/
+	padding: 0 1rem;
+}
+
+.item-box {
+	margin: 1rem 0;
+	width: 30%;
+	background-color: rgba(122, 42, 0, .3);
+	border-radius: 0.5rem;
+}
+
+.card {
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	perspective: 1000px;
+}
+
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.9s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover .card-inner {
+	transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.card-front {
+	background-color: rgba(122, 42, 0, 0.3);
+}
+
+.card-back {
+	background-color: #2980b9;
+	transform: rotateY(180deg);
+}
